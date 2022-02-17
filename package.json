@@ -3,20 +3,30 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run lint:fix && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint ./pages --fix"
   },
   "dependencies": {
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ui-neumorphism": "^1.1.3"
   },
   "devDependencies": {
     "@types/node": "17.0.18",
     "@types/react": "17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "autoprefixer": "^10.4.2",
     "eslint": "8.9.0",
     "eslint-config-next": "12.0.10",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "postcss": "^8.4.6",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.23",
     "typescript": "4.5.5"
   }
 }
